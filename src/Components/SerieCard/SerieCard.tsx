@@ -1,11 +1,38 @@
-import "./SerieCard.css"
+import "./SerieCard.css";
+import { SerieData } from "../../Interfaces/SerieData.ts";
+import Popup from "../Popup/Popup.tsx";
+import { useState } from "react";
 
-function SerieCard() {
-    return (
-        <div className="card-body">
-            <img src="../../../public/serieLogo/lePassageOublie.png"/>
-        </div>
-    )
+interface SerieCardProps {
+    serieData: SerieData;
 }
 
-export default SerieCard
+function SerieCard({ serieData }: SerieCardProps) {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
+
+    const handleCardClick = () => {
+        setIsPopupOpen(true);
+        setIsClosing(false);
+    };
+
+    const handleClosePopup = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+            setIsPopupOpen(false);
+        }, 300); // Match the duration of the animation
+    };
+
+    return (
+        <div>
+            <div className="card-body" onClick={handleCardClick}>
+                <img src={`../../../public/serieLogo/${serieData.images}/card.png`} />
+            </div>
+            {isPopupOpen && (
+                <Popup onClose={handleClosePopup} serieData={serieData} isClosing={isClosing} />
+            )}
+        </div>
+    );
+}
+
+export default SerieCard;
