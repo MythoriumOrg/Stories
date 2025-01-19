@@ -1,0 +1,18 @@
+.card-body {
+	align-items:      center;
+	background-color: #2F2F2F;
+	border-radius:    2.5rem;
+	box-shadow:       14px 14px 30px rgba(0, 0, 0, 0.4),
+					  inset 14px 14px 30px rgba(0, 0, 0, 0.4);
+	display:          flex;
+	height:           18rem;
+	justify-content:  center;
+	margin:           2rem;
+	width:            27rem;
+
+}
+
+.card-body img {
+	height: 15rem;
+	width:  24rem;
+}
