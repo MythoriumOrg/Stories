@@ -11,10 +11,11 @@
 }
 
 .popup-content {
-    background-color: white;
-    padding: 2rem;
+    height: 90vh;
+    width: 40vw;
     border-radius: 1rem;
     animation: zoomIn 0.3s ease-in-out;
+	background: linear-gradient(to bottom, rgba(47, 47, 47, 0) 26%, rgba(47, 47, 47, 1) 74%), url('path/to/your/background-image.jpg');
 }
 
 .popup-content.zoom-in {
@@ -23,6 +24,14 @@
 
 .popup-content.zoom-out {
 	animation: zoomOut 0.3s ease-in-out;
+}
+
+.popup-logo{
+	width: 35vw;
+	margin: 0 2.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @keyframes zoomIn {
