@@ -2,11 +2,12 @@
   {
     "name": "Le Passage Oublié",
     "images": "lePassageOublie",
-    "tommes": [
+    "volumes": [
       {
         "number": 1,
         "title": "Mystères de Kaldarhim",
-        "image": "mysteresDeKaldarhim"
+        "image": "mysteresDeKaldarhim",
+        "url": "lePassageOublieMysteresDeKaldarhim"
       }
     ]
   }

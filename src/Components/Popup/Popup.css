@@ -12,7 +12,7 @@
 
 .popup-content {
     height: 90vh;
-    width: 40vw;
+    width: 50rem;
     border-radius: 1rem;
     animation: zoomIn 0.3s ease-in-out;
 	background: linear-gradient(to bottom, rgba(47, 47, 47, 0) 26%, rgba(47, 47, 47, 1) 74%), url('path/to/your/background-image.jpg');
@@ -27,8 +27,8 @@
 }
 
 .popup-logo{
-	width: 35vw;
-	margin: 0 2.5vw;
+	width: 45rem;
+	margin: 0 2.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;

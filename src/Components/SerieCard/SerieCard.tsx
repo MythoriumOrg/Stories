@@ -26,7 +26,7 @@ function SerieCard({ serieData }: SerieCardProps) {
     return (
         <div>
             <div className="card-body" onClick={handleCardClick}>
-                <img src={`../../../public/serieLogo/${serieData.images}/card.png`} />
+                <img src={`/serieLogo/${serieData.images}/card.png`} />
             </div>
             {isPopupOpen && (
                 <Popup onClose={handleClosePopup} serieData={serieData} isClosing={isClosing} />

@@ -1,17 +1,14 @@
-import './App.css'
-import SerieCard from "./Components/SerieCard/SerieCard.tsx";
-import seriesData from "../public/data/seriesData.json";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Homepage from './Components/Homepage/Homepage';
 
 function App() {
     return (
-        <div className="body">
-            <div className="series-cards">
-                {seriesData.map((serie, index) => (
-                    <SerieCard key={index} serieData={serie}/>
-                ))}
-            </div>
-        </div>
-    )
+        <Router>
+            <Routes>
+                <Route path="/" element={<Homepage />} />
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
+export default App;

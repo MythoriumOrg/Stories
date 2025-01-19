@@ -9,7 +9,12 @@
 	justify-content:  center;
 	margin:           2rem;
 	width:            27rem;
+	transition-duration: 0.2s;
+}
 
+.card-body:hover{
+	background-color:    #2A2A2A;
+	transition-duration: 0.2s;
 }
 
 .card-body img {
