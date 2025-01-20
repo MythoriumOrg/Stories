@@ -3,17 +3,17 @@ import "./VolumeCard.css";
 
 interface VolumeCardProps {
     volumeData: Volume;
-    images: string;
+    url: string;
 }
 
-function VolumeCard({volumeData, images}: VolumeCardProps) {
+function VolumeCard({volumeData, url}: VolumeCardProps) {
     const handleVolumeSelection = () => {
-        window.location.href = `${process.env.REACT_APP_READING_URL}/?volume=${volumeData.url}`;
+        window.location.href = `${process.env.REACT_APP_BASE_URL}/read/?url=${url}&volume=${volumeData.number}`;
     }
 
     return (
         <div className="volumeCard-body" onClick={handleVolumeSelection}>
-            <img src={`/serieLogo/${images}/volume${volumeData.number}.png`} alt="logo serie"
+            <img src={`/series/${url}/volume${volumeData.number}/cover.png`} alt="logo serie"
                  className="volumeCard-cover"/>
             <div className="volumeCard-infos">
                 <div>Tome {volumeData.number}</div>

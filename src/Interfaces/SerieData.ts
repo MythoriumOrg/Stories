@@ -2,6 +2,6 @@ import {Volume} from "./Volume.ts";
 
 export interface SerieData {
     name: string;
-    images: string;
+    url: string;
     volumes: Volume[];
 }
