@@ -16,7 +16,7 @@ function VolumeCard({volumeData, url}: VolumeCardProps) {
             <img src={`/series/${url}/volume${volumeData.number}/cover.png`} alt="logo serie"
                  className="volumeCard-cover"/>
             <div className="volumeCard-infos">
-                <div>Tome {volumeData.number}</div>
+                {volumeData.number !== 0 && <div>Tome {volumeData.number}</div>}
                 <div>{volumeData.title}</div>
             </div>
         </div>

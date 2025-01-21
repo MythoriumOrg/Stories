@@ -8,5 +8,15 @@
         "title": "Mystères de Kaldarhim"
       }
     ]
+  },
+  {
+    "name": "Les Sarphyra",
+    "url": "lesSarphyra",
+    "volumes": [
+      {
+        "number": 0,
+        "title": "Les Sarphyra"
+      }
+    ]
   }
 ]

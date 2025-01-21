@@ -19,6 +19,8 @@ function Reader() {
         const url = params.get('url');
         const volume = params.get('volume');
 
+        console.log('Fetching story:', url, volume);
+        console.log(`/series/${url}/volume${volume}/story.html`)
         fetch(`/series/${url}/volume${volume}/story.html`)
             .then(response => response.text())
             .then(data => setStory(data))

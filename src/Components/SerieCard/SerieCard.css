@@ -20,4 +20,5 @@
 .card-body img {
 	height: 15rem;
 	width:  24rem;
+	border-radius: 1rem;
 }
