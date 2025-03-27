@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "deployFront": "rm -rf /var/www/stories.mythorium.ebasson.fr/* && cp -r dist/* /var/www/stories.mythorium.ebasson.fr/",
+    "update": "git fetch --all && git reset --hard origin/master && npm install",
+    "updateDeploy": "npm run update && npm run build && npm run deployFront",
+    "init": "mkdir -p /var/www/stories.mythorium.ebasson.fr"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
