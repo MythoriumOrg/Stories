@@ -1,4 +1,5 @@
 import "./Reader.css";
+import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {ReaderPrams} from "../../Interfaces/ReaderPrams.ts";
 
@@ -42,9 +43,9 @@ function Reader() {
     return (
         <div>
             <div className="header">
-                <a className="header-bouton-retour" href={process.env.REACT_APP_BASE_URL}>
+                <Link className="header-bouton-retour" to="/">
                     {`< Retour`}
-                </a>
+                </Link>
                 <div className="header-options">
                     <div>
                         <label>
