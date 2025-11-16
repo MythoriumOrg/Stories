@@ -10,16 +10,6 @@
 		]
 	},
 	{
-		"name" : "Les Sarphyra",
-		"url" : "lesSarphyra",
-		"volumes" : [
-			{
-				"number" : 0,
-				"title" : "Les Sarphyra"
-			}
-		]
-	},
-	{
 		"name" : "La Boutique aux Simples",
 		"url" : "laBoutiqueAuxSimples",
 		"volumes" : [
