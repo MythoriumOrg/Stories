@@ -28,5 +28,15 @@
 				"title" : "La Boutique aux Simples"
 			}
 		]
+	},
+	{
+		"name" : "La Forge",
+		"url" : "laForge",
+		"volumes" : [
+			{
+				"number" : 1,
+				"title" : "La patience forgeronne"
+			}
+		]
 	}
 ]
