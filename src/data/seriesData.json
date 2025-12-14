@@ -1,21 +1,11 @@
 [
 	{
-		"name" : "Le Passage Oublié",
-		"url" : "lePassageOublie",
+		"name" : "La Forge",
+		"url" : "laForge",
 		"volumes" : [
 			{
 				"number" : 1,
-				"title" : "Mystères de Kaldarhim"
-			}
-		]
-	},
-	{
-		"name" : "La Boutique aux Simples",
-		"url" : "laBoutiqueAuxSimples",
-		"volumes" : [
-			{
-				"number" : 0,
-				"title" : "La Boutique aux Simples"
+				"title" : "La patience forgeronne"
 			}
 		]
 	}
