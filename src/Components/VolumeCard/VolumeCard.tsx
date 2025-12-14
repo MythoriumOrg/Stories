@@ -1,4 +1,5 @@
 import {Volume} from "../../Interfaces/Volume.ts";
+import {useNavigate} from "react-router-dom";
 import "./VolumeCard.css";
 
 interface VolumeCardProps {
@@ -7,8 +8,10 @@ interface VolumeCardProps {
 }
 
 function VolumeCard({volumeData, url}: VolumeCardProps) {
+    const navigate = useNavigate();
+
     const handleVolumeSelection = () => {
-        window.location.href = `${process.env.REACT_APP_BASE_URL}/read/?url=${url}&volume=${volumeData.number}`;
+        navigate(`/read?url=${url}&volume=${volumeData.number}`);
     }
 
     return (

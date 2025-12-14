@@ -1,4 +1,4 @@
-import seriesData from '../../../public/data/seriesData.json'
+import seriesData from '../../data/seriesData.json'
 import SerieCard from "../SerieCard/SerieCard.tsx";
 import './Homepage.css'
 
