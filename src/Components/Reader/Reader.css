@@ -1,185 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Macondo&display=swap');
+
 .header {
-        position: fixed;
-        top: 0;
-        background-color: #3c3c3c;
-        height:           4rem;
-        width:            100%;
-        display: flex;
-        justify-content:  space-between;
-        z-index: 10;
+	background-color: #3C3C3C;
+	display:          flex;
+	height:           4rem;
+	justify-content:  space-between;
+	position:         fixed;
+	top:              0;
+	width:            100%;
+	z-index:          10;
 }
 
 .header-bouton-retour {
-        all: unset;
+	all: unset;
 }
 
 .header-bouton-retour {
-        align-items:      center;
-        background-color: #3c3c3c;
-        color:            aliceblue;
-        cursor:           pointer;
-        display:          flex;
-        font-size:        1.5rem;
-        height:           4rem;
-        justify-content:  center;
-        width:            10rem;
+	align-items:      center;
+	background-color: #3C3C3C;
+	color:            aliceblue;
+	cursor:           pointer;
+	display:          flex;
+	font-size:        1.5rem;
+	height:           4rem;
+	justify-content:  center;
+	width:            10rem;
 }
 
-.header-options{
-        height: 4rem;
-        display:          flex;
-        justify-content:  center;
-        align-items:      center;
-        gap: 2rem       ;
-        margin-right: 2rem;
+.header-options {
+	align-items:     center;
+	display:         flex;
+	gap:             2rem;
+	height:          4rem;
+	justify-content: center;
+	margin-right:    2rem;
 }
 
-.header-options div{
-        height: 4rem;
-        display:          flex;
-        justify-content:  center;
-        align-items:      center;
-        gap: .2rem      ;
-        font-size: 1.2rem;
-        color: aliceblue;
+.header-options div {
+	align-items:     center;
+	color:           aliceblue;
+	display:         flex;
+	font-size:       1.2rem;
+	gap:             .2rem;
+	height:          4rem;
+	justify-content: center;
 }
 
-.story-html{
-        height: 100%;
-        padding: 5rem;
-        margin: 0 auto;
+.story-html {
+	height:  100%;
+	margin:  0 auto;
+	padding: 5rem;
 }
 
-.story-html h1{
-    text-align: center;
-    scroll-margin-top: 6rem;
+.story-html h1 {
+	scroll-margin-top: 6rem;
+	text-align:        center;
 }
 
-.story-html h2{
-    text-align: center;
-    scroll-margin-top: 6rem;
+.story-html h2 {
+	scroll-margin-top: 6rem;
+	text-align:        center;
 }
 
-.story-html h3{
-        margin-top: 3rem;
-        text-align: center;
-        scroll-margin-top: 6rem;
-        position: sticky;
-        top: calc(4rem + 1rem);
-        padding: 1rem 0;
-        z-index: 5;
-        background-color: inherit;
-        box-shadow: none;
-        cursor: pointer;
-        transition: box-shadow 0.2s ease;
+.story-html h3 {
+	background-color:  inherit;
+	box-shadow:        none;
+	cursor:            pointer;
+	margin-top:        3rem;
+	padding:           1rem 0;
+	position:          sticky;
+	scroll-margin-top: 6rem;
+	text-align:        center;
+	top:               calc(4rem + 1rem);
+	transition:        box-shadow 0.2s ease;
+	z-index:           5;
 }
 
 .story-html h3.is-stuck {
-        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.25);
+	box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.25);
 }
 
-.story-html p{
-        text-align: justify;
+.story-html p {
+	text-align: justify;
 }
 
-.story-html div{
+.story-html .note-auteur {
+	color:   red;
+	display: none;
+	font-family: "Macondo", cursive;
+	font-style: italic;
+	font-size: 1rem;
+	transform: rotate(-5deg);
+	margin-top: -40px;
+	margin-bottom: 40px;
+}
+
+.story-html div {
 }
 
 body::-webkit-scrollbar {
-        display: none;
-        background: none;
+	background: none;
+	display:    none;
 }
 
 .theme-light {
-        background-color: #f5f5f5;
-        color: #333;
+	background-color: #F5F5F5;
+	color:            #333;
 }
 
 .theme-light h3 {
-        background-color: #f5f5f5;
+	background-color: #F5F5F5;
 }
 
 .theme-dark {
-        background-color: #1f1f1f;
-        color: #F5F5F5;
+	background-color: #1F1F1F;
+	color:            #F5F5F5;
 }
 
 .theme-dark h3 {
-        background-color: #1f1f1f;
+	background-color: #1F1F1F;
 }
 
 .chapter-menu {
-        position: fixed;
-        top: calc(4rem + 4.5rem);
-        left: 50%;
-        transform: translateX(-50%);
-        max-height: 24rem;
-        width: min(28rem, 90vw);
-        border-radius: 0.75rem;
-        padding: 0.75rem 0;
-        overflow-y: auto;
-        box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.35);
-        z-index: 20;
+	border-radius: 0.75rem;
+	box-shadow:    0 1rem 2.5rem rgba(0, 0, 0, 0.35);
+	left:          50%;
+	max-height:    24rem;
+	overflow-y:    auto;
+	padding:       0.75rem 0;
+	position:      fixed;
+	top:           calc(4rem + 4.5rem);
+	transform:     translateX(-50%);
+	width:         min(28rem, 90vw);
+	z-index:       20;
 }
 
 .chapter-menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
+	display:        flex;
+	flex-direction: column;
+	gap:            0.25rem;
+	list-style:     none;
+	margin:         0;
+	padding:        0;
 }
 
 .chapter-menu li button {
-        width: 100%;
-        border: none;
-        background: none;
-        text-align: left;
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 0;
-        color: inherit;
-        transition: background-color 0.2s ease;
+	background:    none;
+	border:        none;
+	border-radius: 0;
+	color:         inherit;
+	cursor:        pointer;
+	font-size:     1rem;
+	padding:       0.75rem 1.5rem;
+	text-align:    left;
+	transition:    background-color 0.2s ease;
+	width:         100%;
 }
 
 .chapter-menu li button:hover,
 .chapter-menu li button:focus {
-        background-color: rgba(0, 0, 0, 0.08);
+	background-color: rgba(0, 0, 0, 0.08);
 }
 
 .chapter-menu li button.is-active {
-        font-weight: 600;
+	font-weight: 600;
 }
 
 .chapter-menu.theme-light {
-        background-color: #ffffff;
-        color: #1f1f1f;
+	background-color: #FFF;
+	color:            #1F1F1F;
 }
 
 .chapter-menu.theme-light li button:hover,
 .chapter-menu.theme-light li button:focus {
-        background-color: rgba(0, 0, 0, 0.06);
+	background-color: rgba(0, 0, 0, 0.06);
 }
 
 .chapter-menu.theme-dark {
-        background-color: #2a2a2a;
-        color: #f5f5f5;
+	background-color: #2A2A2A;
+	color:            #F5F5F5;
 }
 
 .chapter-menu.theme-dark li button:hover,
 .chapter-menu.theme-dark li button:focus {
-        background-color: rgba(255, 255, 255, 0.08);
+	background-color: rgba(255, 255, 255, 0.08);
 }
 
 .header-options select {
-        height: 2rem;
-        border-radius: .25rem;
-        border: none;
-        padding: 0 .5rem;
+	border:        none;
+	border-radius: .25rem;
+	height:        2rem;
+	padding:       0 .5rem;
 }
 
 .header-options label {
-        white-space: nowrap;
+	white-space: nowrap;
 }
