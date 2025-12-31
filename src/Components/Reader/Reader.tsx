@@ -195,25 +195,45 @@ function Reader() {
         };
     }, [menuOpen]);
 
-    useEffect(() => {
-        const displayNotes = () => {
-            const container = storyContainerRef.current ?? document;
-            container.querySelectorAll('p.note-auteur').forEach((note) => {
-                if (note instanceof HTMLElement) {
-                    note.style.display = 'block';
-                }
-            });
-        };
+	useEffect(() => {
+		const displayNotes = () => {
+			const container = storyContainerRef.current ?? document;
+			container.querySelectorAll("p.note-auteur").forEach((note) => {
+				if (note instanceof HTMLElement) {
+					note.style.display = "block";
+				}
+			});
+		};
 
-        (window as typeof window & {displayNotes?: () => void}).displayNotes = displayNotes;
+		(window as typeof window & { displayNotes?: () => void }).displayNotes = displayNotes;
 
-        return () => {
-            const win = window as typeof window & {displayNotes?: () => void};
-            if (win.displayNotes === displayNotes) {
-                delete win.displayNotes;
-            }
-        };
-    }, []);
+		return () => {
+			const win = window as typeof window & { displayNotes?: () => void };
+			if (win.displayNotes === displayNotes) {
+				delete win.displayNotes;
+			}
+		};
+	}, []);
+
+	useEffect(() => {
+		const displayNotesPerso = () => {
+			const container = storyContainerRef.current ?? document;
+			container.querySelectorAll("p.note-perso").forEach((note) => {
+				if (note instanceof HTMLElement) {
+					note.style.display = "block";
+				}
+			});
+		};
+
+		(window as typeof window & { displayNotesPerso?: () => void }).displayNotesPerso = displayNotesPerso;
+
+		return () => {
+			const win = window as typeof window & { displayNotesPerso?: () => void };
+			if (win.displayNotesPerso === displayNotesPerso) {
+				delete win.displayNotesPerso;
+			}
+		};
+	}, []);
 
     const scrollToChapter = (id: string) => {
         const container = storyContainerRef.current;

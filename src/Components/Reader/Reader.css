@@ -85,13 +85,23 @@
 }
 
 .story-html .note-auteur {
-	color:   red;
-	display: none;
-	font-family: "Macondo", cursive;
-	font-style: italic;
-	font-size: 1rem;
-	transform: rotate(-5deg);
-	margin-top: -40px;
+	color:         #8F2020;
+	display:       none;
+	font-family:   "Macondo", cursive;
+	font-style:    italic;
+	font-size:     1rem;
+	transform:     rotate(-5deg);
+	margin-top:    -40px;
+	margin-bottom: 40px;
+}
+.story-html .note-perso {
+	color:         #292961;
+	display:       none;
+	font-family:   "Macondo", cursive;
+	font-style:    italic;
+	font-size:     1rem;
+	transform:     rotate(-5deg);
+	margin-top:    -40px;
 	margin-bottom: 40px;
 }
 
