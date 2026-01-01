@@ -21,11 +21,6 @@ function Homepage() {
     }, []);
 
     const [isLoading, setIsLoading] = useState(true);
-    const [hasInitialLoader, setHasInitialLoader] = useState(false);
-
-    useEffect(() => {
-        setHasInitialLoader(Boolean(document.getElementById("initial-loader")));
-    }, []);
 
     useEffect(() => {
         if (imageUrls.length === 0) {
@@ -67,23 +62,11 @@ function Homepage() {
         const initialLoader = document.getElementById("initial-loader");
         if (initialLoader) {
             initialLoader.remove();
-            setHasInitialLoader(false);
         }
     }, [isLoading]);
 
     return (
         <div className="body">
-            {isLoading && !hasInitialLoader && (
-                <div className="page-loader" role="status" aria-live="polite">
-                    <div className="page-loader__crest" aria-hidden="true">
-                        <span className="page-loader__ring" />
-                        <span className="page-loader__shield" />
-                        <span className="page-loader__sword" />
-                        <span className="page-loader__sword page-loader__sword--reverse" />
-                    </div>
-                    <p className="page-loader__text">Chargement des chroniques...</p>
-                </div>
-            )}
             {!isLoading && (
                 <div className="series-cards">
                     {seriesData.map((serie, index) => (
