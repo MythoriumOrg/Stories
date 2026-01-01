@@ -5,8 +5,106 @@
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mythorium Stories</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #initial-loader {
+        align-items: center;
+        background: radial-gradient(circle at top, rgba(56, 43, 27, 0.9), rgba(15, 15, 18, 0.98));
+        color: #f3e5c7;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        inset: 0;
+        justify-content: center;
+        position: fixed;
+        text-align: center;
+        z-index: 10;
+      }
+
+      #initial-loader .page-loader__crest {
+        height: 120px;
+        position: relative;
+        width: 120px;
+      }
+
+      #initial-loader .page-loader__ring {
+        animation: spin 1.6s linear infinite;
+        border: 3px solid rgba(201, 161, 74, 0.6);
+        border-top-color: #f7d98b;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(201, 161, 74, 0.35);
+        inset: 0;
+        position: absolute;
+      }
+
+      #initial-loader .page-loader__shield {
+        background: linear-gradient(145deg, #c9a14a, #7a4b1f);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        clip-path: polygon(50% 0%, 100% 18%, 100% 60%, 50% 100%, 0% 60%, 0% 18%);
+        height: 70px;
+        left: 50%;
+        position: absolute;
+        top: 25px;
+        transform: translateX(-50%);
+        width: 60px;
+      }
+
+      #initial-loader .page-loader__sword {
+        background: linear-gradient(180deg, #f2f2f2, #b0b0b0);
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
+        height: 90px;
+        left: 50%;
+        position: absolute;
+        top: 10px;
+        transform: translateX(-50%) rotate(45deg);
+        width: 6px;
+      }
+
+      #initial-loader .page-loader__sword::after {
+        background: #c9a14a;
+        border-radius: 2px;
+        content: "";
+        height: 12px;
+        left: -10px;
+        position: absolute;
+        top: 65px;
+        width: 26px;
+      }
+
+      #initial-loader .page-loader__sword--reverse {
+        transform: translateX(-50%) rotate(-45deg);
+      }
+
+      #initial-loader .page-loader__text {
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="initial-loader" role="status" aria-live="polite">
+      <div class="page-loader__crest" aria-hidden="true">
+        <span class="page-loader__ring"></span>
+        <span class="page-loader__shield"></span>
+        <span class="page-loader__sword"></span>
+        <span class="page-loader__sword page-loader__sword--reverse"></span>
+      </div>
+      <p class="page-loader__text">Chargement des chroniques...</p>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
