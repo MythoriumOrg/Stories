@@ -8,5 +8,15 @@
 				"title" : "La patience forgeronne"
 			}
 		]
+	},
+	{
+		"name" : "Vextris",
+		"url" : "VextrisLixyTyla",
+		"volumes" : [
+			{
+				"number" : 1,
+				"title" : "Réveil Difficile"
+			}
+		]
 	}
 ]
